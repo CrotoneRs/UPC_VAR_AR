@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="FINGER" size="1.000000 0.561875" />
+    <ImageTarget name="AR_CODE_1_2" size="1.000000 1.001120" />
+    <ImageTarget name="AR_CODE_4" size="1.000000 1.011905" />
+    <ImageTarget name="AR_CODE_3" size="1.000000 0.994048" />
+    <ImageTarget name="AR_CODE_2" size="1.000000 1.000000" />
+    <ImageTarget name="AR_CODE_1" size="1.000000 1.001120" />
+  </Tracking>
+</QCARConfig>
