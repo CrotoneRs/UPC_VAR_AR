@@ -1,0 +1,25 @@
+/[Ll]Library/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+
+# Unity3D generated meta files
+*.pidb.meta
+
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
+
+# Builds
+*.apk
+*.unitypackage
+/Temp/UnityLockfile
+/Temp/UnityLockfile
+
+*.meta
+
+/.vs
+Assets/*.meta
+obj
+Temp
+Library
