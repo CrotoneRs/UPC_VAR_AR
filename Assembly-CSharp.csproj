@@ -54,12 +54,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraFocusMonitor.cs" />
+     <Compile Include="Assets\Scripts\Chemistry\AtomDefinition.cs" />
      <Compile Include="Assets\Scripts\Chemistry\ChemistryMatches.cs" />
-     <Compile Include="Assets\Scripts\Chemistry\Elements\ElementScript.cs" />
-     <Compile Include="Assets\Scripts\Chemistry\Elements\HydrogenScript.cs" />
-     <Compile Include="Assets\Scripts\Chemistry\Elements\OxygenScript.cs" />
-     <Compile Include="Assets\Scripts\Chemistry\ElementsDefinition.cs" />
-     <Compile Include="Assets\Scripts\Chemistry\SubstancesDefinition.cs" />
+     <Compile Include="Assets\Scripts\Chemistry\Elements\AtomScript.cs" />
+     <Compile Include="Assets\Scripts\Chemistry\MoleculeDefinition.cs" />
      <Compile Include="Assets\Scripts\DistanceMonitor.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />

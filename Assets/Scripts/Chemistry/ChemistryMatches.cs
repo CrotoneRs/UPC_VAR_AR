@@ -11,10 +11,10 @@ namespace Assets.Scripts.Chemistry
     {
         public struct ChemistryMatch
         {
-            public SUSBSTANCE SubstanceName { get; set; }
-            public List<ELEMENTS> Elements { get; set; }
+            public MOLECULE SubstanceName { get; set; }
+            public List<ATOM> Elements { get; set; }
 
-            public ChemistryMatch(SUSBSTANCE newName, List<ELEMENTS> newElements)
+            public ChemistryMatch(MOLECULE newName, List<ATOM> newElements)
             {
                 this.SubstanceName = newName;
                 this.Elements = newElements;
@@ -46,8 +46,8 @@ namespace Assets.Scripts.Chemistry
         {
             this.ChemistryMatchesInstance = new List<ChemistryMatch>();
 
-            this.ChemistryMatchesInstance.Add(new ChemistryMatch(SUSBSTANCE.WATER,
-                new List<ELEMENTS>() { ELEMENTS.HYDROGEN, ELEMENTS.OXYGEN, ELEMENTS.HYDROGEN }));
+            this.ChemistryMatchesInstance.Add(new ChemistryMatch(MOLECULE.WATER,
+                new List<ATOM>() { ATOM.HYDROGEN, ATOM.OXYGEN, ATOM.HYDROGEN }));
         }
     }
 }

@@ -23,7 +23,8 @@ namespace Assets.Scripts
             /* Query the StateManager to Retrieve the List of Currently 'ACTIVE' Markers */
             List<TrackableBehaviour> activeTrackables = vuforiaStateManager.GetActiveTrackableBehaviours().ToList();
 
-            Debug.Log("Track: " + activeTrackables.Count);
+            foreach (var i in activeTrackables)
+                Debug.Log(i.name);
 
             /* Get Chemistry Matches Instance */
             List<ChemistryMatches.ChemistryMatch> chemistryMatchesList = ChemistryMatches.Instance.ChemistryMatchesInstance;

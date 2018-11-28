@@ -4,7 +4,7 @@
 
 namespace Assets.Scripts.Chemistry
 {
-    public enum SUSBSTANCE
+    public enum MOLECULE
     {
         WATER
     }
