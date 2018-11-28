@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="AR_CODE_PHOSPHORUS_1" size="1.000000 1.000000" />
-    <ImageTarget name="AR_CODE_SODIUM_1" size="1.000000 1.000000" />
-    <ImageTarget name="AR_CODE_CARBON_2" size="1.000000 1.005882" />
-    <ImageTarget name="AR_CODE_CARBON_1" size="1.000000 1.005882" />
-    <ImageTarget name="AR_CODE_NITROGEN_1" size="1.000000 0.997143" />
-    <ImageTarget name="AR_CODE_SULFUR_1" size="1.000000 1.000000" />
-    <ImageTarget name="AR_CODE_HYDROGEN_2" size="1.000000 1.011905" />
-    <ImageTarget name="AR_CODE_HYDROGEN_1" size="1.000000 1.011905" />
-    <ImageTarget name="AR_CODE_OXYGEN_2" size="1.000000 0.994048" />
-    <ImageTarget name="AR_CODE_OXYGEN_1" size="1.000000 0.994048" />
+    <ImageTarget name="QR_CODE_SILICON_1" size="1.000000 1.000000" />
+    <ImageTarget name="QR_CODE_PHOSPHORUS_1" size="1.000000 1.000000" />
+    <ImageTarget name="QR_CODE_SODIUM_1" size="1.000000 1.000000" />
+    <ImageTarget name="QR_CODE_SURFUR_1" size="1.000000 1.000000" />
+    <ImageTarget name="QR_CODE_NITROGEN_1" size="1.000000 1.000000" />
+    <ImageTarget name="QR_CODE_OXYGEN_2" size="1.000000 1.000000" />
+    <ImageTarget name="QR_CODE_OXYGEN_1" size="1.000000 1.000000" />
+    <ImageTarget name="QR_CODE_HYDROGEN_2" size="1.000000 1.000000" />
+    <ImageTarget name="QR_CODE_HYDROGEN_1" size="1.000000 1.000000" />
+    <ImageTarget name="QR_CODE_CARBON_2" size="1.000000 1.000000" />
+    <ImageTarget name="QR_CODE_CARBON_1" size="1.000000 1.000000" />
   </Tracking>
 </QCARConfig>

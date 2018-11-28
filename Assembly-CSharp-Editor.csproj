@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2F0CF827-762D-9317-1FD7-730543B27359}</ProjectGuid>
+    <ProjectGuid>{2C876959-745D-CB80-3E43-A11C909A4BF9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -57,16 +57,16 @@
      <None Include="Assets\Editor\Vuforia\Emulator\VuforiaEmulator.xml" />
      <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Cezary Bella/Desktop/VAR_AR/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Cezary Bella/Desktop/UPC/Virutal_And_Augmented_Reality/UPC_VAR_AR/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Cezary Bella/Desktop/VAR_AR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Cezary Bella/Desktop/UPC/Virutal_And_Augmented_Reality/UPC_VAR_AR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Cezary Bella/Desktop/VAR_AR/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Cezary Bella/Desktop/UPC/Virutal_And_Augmented_Reality/UPC_VAR_AR/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Cezary Bella/Desktop/VAR_AR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Cezary Bella/Desktop/UPC/Virutal_And_Augmented_Reality/UPC_VAR_AR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -362,7 +362,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{6265CC3A-202D-1238-923F-4355787B680F}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{DFDBB63E-FAC2-6903-5923-C229B0A1BC83}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

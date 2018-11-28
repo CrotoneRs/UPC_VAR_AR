@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6265CC3A-202D-1238-923F-4355787B680F}</ProjectGuid>
+    <ProjectGuid>{DFDBB63E-FAC2-6903-5923-C229B0A1BC83}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CameraFocusMonitor.cs" />
      <Compile Include="Assets\Scripts\Chemistry\ChemistryMatches.cs" />
      <Compile Include="Assets\Scripts\Chemistry\Elements\ElementScript.cs" />
      <Compile Include="Assets\Scripts\Chemistry\Elements\HydrogenScript.cs" />
@@ -65,24 +66,24 @@
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
      <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
-     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\VAR_AR.xml" />
+     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
      <None Include="Assets\Vuforia\Shaders\DepthContour.shader" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Cezary Bella/Desktop/VAR_AR/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Cezary Bella/Desktop/UPC/Virutal_And_Augmented_Reality/UPC_VAR_AR/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Cezary Bella/Desktop/VAR_AR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Cezary Bella/Desktop/UPC/Virutal_And_Augmented_Reality/UPC_VAR_AR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Cezary Bella/Desktop/VAR_AR/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Cezary Bella/Desktop/UPC/Virutal_And_Augmented_Reality/UPC_VAR_AR/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Cezary Bella/Desktop/VAR_AR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Cezary Bella/Desktop/UPC/Virutal_And_Augmented_Reality/UPC_VAR_AR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
