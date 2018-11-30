@@ -11,10 +11,13 @@ namespace Assets.Scripts.Chemistry.Elements
         float speed = 0.1f;
         float acceleration = 0.1f;
         float startTime;
+        public Material electornMaterial;
+        private readonly Random rnd = new UnityEngine.Random();
+
         public static Dictionary<string, int> numElectrons = new Dictionary<string, int>(){
                                                 {"CarbonAtom",6},
                                                 {"HydrogenAtom",1},
-                                                {"nytrogenAtom",7},
+                                                {"NitrogenAtom",7},
                                                 {"OxygenAtom",8},
                                                 {"PhosphorusAtom", 15},
                                                 {"SiliconAtom",14},
@@ -36,6 +39,7 @@ namespace Assets.Scripts.Chemistry.Elements
             for (int i = 0; i < elNumber; i++)
             {
                 GameObject electron = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                electron.GetComponent<Renderer>().material = electornMaterial;
                 electron.transform.parent = this.transform;
                 float angle = (i / (elNumber / 2f)) * Mathf.PI; // Calculate the angle at which the element will be placed.
                                                                 // For a semicircle, we would use (i / numNodes) * Math.PI.
@@ -43,8 +47,11 @@ namespace Assets.Scripts.Chemistry.Elements
                 float z = ((radius + (distX / 2)) * Mathf.Sin(angle)); // Calculate the z position of the element.
 
                 electron.transform.localPosition = new Vector3(x,0,z);
-                electron.transform.localScale = new Vector3(0.23f, 0.23f, 0.23f);
-                
+                electron.transform.parent = this.transform.parent;
+                electron.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+                electron.transform.parent = this.transform;
+                electron.GetComponent<Renderer>().enabled = false;
+
             }
         }
 
@@ -60,6 +67,10 @@ namespace Assets.Scripts.Chemistry.Elements
                 for (int i = 0; i < numEl; i++)
                 {
                     GameObject electron = this.transform.GetChild(i).gameObject;
+
+                    //use simplifyed Schrodinger equation to get orbit
+
+                    //float PHI = rnd.Next(0,1); 
                     electron.transform.RotateAround(this.transform.position, this.transform.TransformVector(Vector3.up), 40 * Time.deltaTime);
                     //float radius = this.transform.lossyScale.x / 2;
                     //float distX = (radius * 2) + 1;
