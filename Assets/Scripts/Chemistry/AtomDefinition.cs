@@ -6,13 +6,13 @@ namespace Assets.Scripts.Chemistry
 {
     public enum ATOM
     {
-        CARBON,
-        HYDROGEN,
-        NITROGEN,
-        OXYGEN,
-        PHOSPHORUS,
-        SILICON,
-        SODIUM,
-        SULFUR
+        CARBON, /* C */
+        HYDROGEN, /* H */
+        NITROGEN, /* N */
+        OXYGEN, /* O */
+        PHOSPHORUS, /* P */
+        SILICON, /* Si */
+        SODIUM, /* Na */
+        SULFUR, /* S */
     }
 }
