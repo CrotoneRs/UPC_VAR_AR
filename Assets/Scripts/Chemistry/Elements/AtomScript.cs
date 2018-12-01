@@ -11,7 +11,6 @@ namespace Assets.Scripts.Chemistry.Elements
         float speed = 0.1f;
         float acceleration = 0.1f;
         float startTime;
-        public Material electornMaterial;
         private readonly Random rnd = new UnityEngine.Random();
 
         public static Dictionary<string, int> numElectrons = new Dictionary<string, int>(){
@@ -36,10 +35,12 @@ namespace Assets.Scripts.Chemistry.Elements
 
             this.transform.localPosition = new Vector3(0, 0, 0);
 
+            Material atomMaterial = this.GetComponent<Renderer>().material;
+
             for (int i = 0; i < elNumber; i++)
             {
                 GameObject electron = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                electron.GetComponent<Renderer>().material = electornMaterial;
+                electron.GetComponent<Renderer>().material = atomMaterial;
                 electron.transform.parent = this.transform;
                 float angle = (i / (elNumber / 2f)) * Mathf.PI; // Calculate the angle at which the element will be placed.
                                                                 // For a semicircle, we would use (i / numNodes) * Math.PI.
