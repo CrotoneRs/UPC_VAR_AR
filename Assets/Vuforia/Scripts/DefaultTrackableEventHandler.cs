@@ -6,6 +6,7 @@ All Rights Reserved.
 Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
 
+using Assets.Scripts;
 using UnityEngine;
 using Vuforia;
 
@@ -62,6 +63,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
             OnTrackingLost();
+
+            /* Own Implementation Of Lost Tracking */
+            GameObject.Find("SceneMonitor").GetComponent<SceneMonitor>().ProceedLost(mTrackableBehaviour);
         }
         else
         {

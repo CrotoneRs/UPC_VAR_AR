@@ -1,9 +1,9 @@
-﻿/* System Usings */
-using System.Collections.Generic;
-
-/*
+﻿/*
     File Defines Matches Between Elements and Substances Used in Application
 */
+
+/* System Usings */
+using System.Collections.Generic;
 
 namespace Assets.Scripts.Chemistry
 {

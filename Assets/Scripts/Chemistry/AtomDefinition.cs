@@ -2,9 +2,6 @@
     File Defines Elements Used in Application
 */
 
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Assets.Scripts.Chemistry
 {
     public enum ATOM
@@ -18,13 +15,4 @@ namespace Assets.Scripts.Chemistry
         SODIUM, /* Na */
         SULFUR, /* S */
     }
-
-    
-        
-
-    
-        
-    
-
-
 }

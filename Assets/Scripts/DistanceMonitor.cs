@@ -15,7 +15,9 @@ namespace Assets.Scripts
 {
     public class DistanceMonitor : MonoBehaviour
     {
-        private struct ActiveWithEnum
+        private bool IsAnimationActive { get; set; }
+
+        public struct ActiveWithEnum
         {
             public TrackableBehaviour Active { get; private set; }
             public ATOM Atom { get; private set; }
@@ -29,6 +31,11 @@ namespace Assets.Scripts
 
                 this.WasConsider = false;
             }
+        }
+
+        public void Start()
+        {
+            this.IsAnimationActive = false;
         }
 
         public void Update()
@@ -74,7 +81,16 @@ namespace Assets.Scripts
                 if (Vector3.Angle(firstToSecondVector, firstToThirdVector) > 5.0f)
                     continue;
 
-                /* TODO: Start The Merge Animation */
+                /* Start The Merge Animation */
+                if (this.IsAnimationActive == false)
+                {
+                    if (matchedAtoms[0].Active.gameObject.activeSelf == false
+                        || matchedAtoms[2].Active.gameObject.activeSelf == false) continue;
+
+                    this.GetComponent<AtomMoleculeTransform>().Proceed(matchedAtoms);
+
+                    this.IsAnimationActive = true;
+                }
             }
         }
 
@@ -99,5 +115,7 @@ namespace Assets.Scripts
 
             return candidatesToMatch;
         }
+
+        public void ResetTheAnimation() { this.IsAnimationActive = false; }
     }
 }
