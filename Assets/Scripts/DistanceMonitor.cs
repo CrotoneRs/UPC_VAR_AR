@@ -84,8 +84,8 @@ namespace Assets.Scripts
                 /* Start The Merge Animation */
                 if (this.IsAnimationActive == false)
                 {
-                    if (matchedAtoms[0].Active.gameObject.activeSelf == false
-                        || matchedAtoms[2].Active.gameObject.activeSelf == false) continue;
+                    if (matchedAtoms[0].Active.transform.GetChild(0).GetChild(0).gameObject.activeSelf == false
+                        || matchedAtoms[2].Active.transform.GetChild(0).GetChild(0).gameObject.activeSelf == false) continue;
 
                     GameObject.Find("SceneMonitor").GetComponent<SceneMonitor>().AddMolecule(matchedAtoms);
 
