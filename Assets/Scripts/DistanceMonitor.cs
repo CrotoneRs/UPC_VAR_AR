@@ -87,9 +87,10 @@ namespace Assets.Scripts
                     if (matchedAtoms[0].Active.gameObject.activeSelf == false
                         || matchedAtoms[2].Active.gameObject.activeSelf == false) continue;
 
-                    this.GetComponent<AtomMoleculeTransform>().Proceed(matchedAtoms);
+                    GameObject.Find("SceneMonitor").GetComponent<SceneMonitor>().AddMolecule(matchedAtoms);
 
                     this.IsAnimationActive = true;
+                    this.GetComponent<AtomMoleculeTransform>().Proceed(matchedAtoms);
                 }
             }
         }
