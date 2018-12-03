@@ -21,9 +21,9 @@ namespace Assets.Scripts.Chemistry
 
         private IEnumerator TranslateAtomsToCenter(List<DistanceMonitor.ActiveWithEnum> matchedAtoms)
         {
-            Vector3 firstPosition = matchedAtoms[0].Active.transform.position;
-            Vector3 secondPosition = matchedAtoms[1].Active.transform.position;
-            Vector3 thirdPosition = matchedAtoms[2].Active.transform.position;
+            Vector3 firstPosition = matchedAtoms[0].Active.transform.GetChild(0).position;
+            Vector3 secondPosition = matchedAtoms[1].Active.transform.GetChild(0).position;
+            Vector3 thirdPosition = matchedAtoms[2].Active.transform.GetChild(0).position;
 
             Vector3 firstToSecondDirection = secondPosition - firstPosition;
             Vector3 thirdToSecondDirection = secondPosition - thirdPosition;
@@ -42,8 +42,8 @@ namespace Assets.Scripts.Chemistry
                 Vector3 newFirstPosition = firstPosition + interpolationValue * firstToSecondDirection;
                 Vector3 newThirdPosition = thirdPosition + interpolationValue * thirdToSecondDirection;
 
-                matchedAtoms[0].Active.transform.position = newFirstPosition;
-                matchedAtoms[2].Active.transform.position = newThirdPosition;
+                matchedAtoms[0].Active.transform.GetChild(0).position = newFirstPosition;
+                matchedAtoms[2].Active.transform.GetChild(0).position = newThirdPosition;
 
                 firstToSecond = Vector3.Distance(newFirstPosition, secondPosition);
                 secondToThird = Vector3.Distance(newThirdPosition, secondPosition);
