@@ -21,9 +21,13 @@ namespace Assets.Scripts.Chemistry
 
         private IEnumerator TranslateAtomsToCenter(List<DistanceMonitor.ActiveWithEnum> matchedAtoms)
         {
-            Vector3 firstPosition = matchedAtoms[0].Active.transform.GetChild(0).position;
-            Vector3 secondPosition = matchedAtoms[1].Active.transform.GetChild(0).position;
-            Vector3 thirdPosition = matchedAtoms[2].Active.transform.GetChild(0).position;
+            string atomName_1 = matchedAtoms[0].Active.name.Split('_')[0];
+            string atomName_2 = matchedAtoms[1].Active.name.Split('_')[0];
+            string atomName_3 = matchedAtoms[2].Active.name.Split('_')[0];
+
+            Vector3 firstPosition = matchedAtoms[0].Active.transform.Find("GameObject/Atom/" + atomName_1 + "Atom").position;
+            Vector3 secondPosition = matchedAtoms[1].Active.transform.Find("GameObject/Atom/" + atomName_2 + "Atom").position;
+            Vector3 thirdPosition = matchedAtoms[2].Active.transform.Find("GameObject/Atom/" + atomName_3 + "Atom").position;
 
             Vector3 firstToSecondDirection = secondPosition - firstPosition;
             Vector3 thirdToSecondDirection = secondPosition - thirdPosition;
@@ -42,8 +46,8 @@ namespace Assets.Scripts.Chemistry
                 Vector3 newFirstPosition = firstPosition + interpolationValue * firstToSecondDirection;
                 Vector3 newThirdPosition = thirdPosition + interpolationValue * thirdToSecondDirection;
 
-                matchedAtoms[0].Active.transform.GetChild(0).position = newFirstPosition;
-                matchedAtoms[2].Active.transform.GetChild(0).position = newThirdPosition;
+                matchedAtoms[0].Active.transform.Find("GameObject/Atom/" + atomName_1 + "Atom").position = newFirstPosition;
+                matchedAtoms[2].Active.transform.Find("GameObject/Atom/" + atomName_3 + "Atom").position = newThirdPosition;
 
                 firstToSecond = Vector3.Distance(newFirstPosition, secondPosition);
                 secondToThird = Vector3.Distance(newThirdPosition, secondPosition);
