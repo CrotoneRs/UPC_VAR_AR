@@ -4,21 +4,33 @@
 
 /* Unity Usings */
 using UnityEngine;
+using System.Collections;
 
 namespace Assets.Scripts.Chemistry.Elements
 {
     public class AtomMoleculeMovement : MonoBehaviour
     {
+
+        float[] probField;
         public void Update()
         {
             this.transform.localPosition = new Vector3(0, Mathf.PingPong(Time.time * 0.25f, 0.5f) + 0.30f, 0);
 
-            for (int i = 0; i < this.transform.childCount; i++)
+            int numElectrons = this.transform.childCount;
+            probField = new float[numElectrons];
+            for (int i = 0; i < numElectrons; i++)
+            {
+                probField[i] = Random.Range(1, numElectrons);
+            }
+            
+            
+                for (int i = 0; i < numElectrons; i++)
             {
                 GameObject electron = this.transform.GetChild(i).gameObject;
 
                 /* Use Simplifyed Schrodinger Equation To Get Orbit */
-                electron.transform.RotateAround(this.transform.position, this.transform.TransformVector(Vector3.up), 40 * Time.deltaTime);
+                float possiblePosition = probField[Random.Range(0, numElectrons - 1)] * Mathf.Exp(-40 * Time.deltaTime);
+                electron.transform.RotateAround(this.transform.position, this.transform.TransformVector(new Vector3(possiblePosition , possiblePosition , possiblePosition )), 125 * Time.deltaTime);
             }
         }
     }
