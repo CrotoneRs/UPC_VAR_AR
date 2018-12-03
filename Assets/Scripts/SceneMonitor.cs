@@ -25,6 +25,9 @@ namespace Assets.Scripts
                 {
                     this.MoleculeDependencies[listSceneElement.name][i].transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
                     this.MoleculeDependencies[listSceneElement.name][i].transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+
+                    string atomName = this.MoleculeDependencies[listSceneElement.name][i].name.Split('_')[0];
+                    this.MoleculeDependencies[listSceneElement.name][i].transform.Find("GameObject/Atom/" + atomName + "Atom").position = Vector3.zero;
                 }
 
                 this.MoleculeDependencies.Remove(listSceneElement.name);
@@ -33,6 +36,9 @@ namespace Assets.Scripts
             {
                 listSceneElement.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
                 listSceneElement.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+
+                string atomName = listSceneElement.name.Split('_')[0];
+                listSceneElement.transform.Find("GameObject/Atom/" + atomName + "Atom").position = Vector3.zero;
             }
         }
 
