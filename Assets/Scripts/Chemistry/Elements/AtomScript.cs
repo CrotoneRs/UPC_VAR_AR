@@ -11,7 +11,9 @@ using UnityEngine;
 namespace Assets.Scripts.Chemistry.Elements
 {
     public class AtomScript : MonoBehaviour
+
     {
+        public Material electronMaterial;
         public static Dictionary<string, int> numElectrons = new Dictionary<string, int>() {
                                                 {"CarbonAtom",6},
                                                 {"HydrogenAtom",1},
@@ -33,12 +35,12 @@ namespace Assets.Scripts.Chemistry.Elements
 
             this.transform.localPosition = new Vector3(0, 0, 0);
 
-            Material atomMaterial = this.GetComponent<Renderer>().material;
+            //Material atomMaterial = this.GetComponent<Renderer>().material;
 
             for (int i = 0; i < elNumber; i++)
             {
                 GameObject electron = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-                electron.GetComponent<Renderer>().material = atomMaterial;
+                electron.GetComponent<Renderer>().material = electronMaterial;
                 electron.transform.parent = this.transform;
                 float angle = (i / (elNumber / 2f)) * Mathf.PI; // Calculate the angle at which the element will be placed.
                                                                 // For a semicircle, we would use (i / numNodes) * Math.PI.
