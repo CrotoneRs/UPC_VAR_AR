@@ -4,7 +4,6 @@
 
 /* Unity Usings */
 using UnityEngine;
-using System.Collections;
 
 namespace Assets.Scripts.Chemistry.Elements
 {

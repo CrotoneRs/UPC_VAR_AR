@@ -68,7 +68,7 @@ namespace Assets.Scripts
                 /* Check The Distant Between Atoms In The Scene */
                 for (int k = 0; k < matchedAtoms.Count - 1; k++)
                     isDistansCorrect.Add(
-                        Vector3.Distance(matchedAtoms[k].Active.transform.position, matchedAtoms[k + 1].Active.transform.position) < 1.5f);
+                        Vector3.Distance(matchedAtoms[k].Active.transform.position, matchedAtoms[k + 1].Active.transform.position) < 1.15f);
 
                 /* Is Any Of The Distant Is InCorrect Then Do Nothing */
                 if (isDistansCorrect.Any(distance => distance == false) == true)
@@ -90,7 +90,8 @@ namespace Assets.Scripts
                     GameObject.Find("SceneMonitor").GetComponent<SceneMonitor>().AddMolecule(matchedAtoms);
 
                     this.IsAnimationActive = true;
-                    this.GetComponent<AtomMoleculeTransform>().Proceed(matchedAtoms);
+                    this.GetComponent<AtomMoleculeTransform>().Proceed(matchedAtoms,
+                        ChemistryMatches.Instance.MoleculeToNameDictionary[chemistryMatchesList[i].SubstanceName]);
                 }
             }
         }

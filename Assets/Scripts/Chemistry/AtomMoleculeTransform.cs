@@ -14,12 +14,12 @@ namespace Assets.Scripts.Chemistry
 {
     public class AtomMoleculeTransform : MonoBehaviour
     {
-        public void Proceed(List<DistanceMonitor.ActiveWithEnum> matchedAtoms)
+        public void Proceed(List<DistanceMonitor.ActiveWithEnum> matchedAtoms, string moleculeName)
         {
-            this.StartCoroutine(TranslateAtomsToCenter(matchedAtoms));
+            this.StartCoroutine(TranslateAtomsToCenter(matchedAtoms, moleculeName));
         }
 
-        private IEnumerator TranslateAtomsToCenter(List<DistanceMonitor.ActiveWithEnum> matchedAtoms)
+        private IEnumerator TranslateAtomsToCenter(List<DistanceMonitor.ActiveWithEnum> matchedAtoms, string moleculeName)
         {
             string atomName_1 = matchedAtoms[0].Active.name.Split('_')[0];
             string atomName_2 = matchedAtoms[1].Active.name.Split('_')[0];
@@ -57,14 +57,31 @@ namespace Assets.Scripts.Chemistry
                 interpolationTime += Time.deltaTime; yield return null;
             }
 
-            matchedAtoms[0].Active.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
-            matchedAtoms[0].Active.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+            GameObject gameObject_1 = matchedAtoms[0].Active.transform.Find("GameObject").gameObject;
 
-            matchedAtoms[2].Active.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
-            matchedAtoms[2].Active.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+            for (int i = 0; i < gameObject_1.transform.childCount; i++)
+                gameObject_1.transform.GetChild(0).gameObject.SetActive(false);
 
-            matchedAtoms[1].Active.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
-            matchedAtoms[1].Active.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+            //matchedAtoms[0].Active.transform.Find("GameObject").gameObject.SetActive(false);
+            //matchedAtoms[0].Active.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+
+            GameObject gameObject_2 = matchedAtoms[2].Active.transform.Find("GameObject").gameObject;
+
+            for (int i = 0; i < gameObject_2.transform.childCount; i++)
+                gameObject_2.transform.GetChild(0).gameObject.SetActive(false);
+
+            //matchedAtoms[2].Active.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+            //matchedAtoms[2].Active.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+
+            GameObject gameObject_3 = matchedAtoms[1].Active.transform.Find("GameObject").gameObject;
+
+            for (int i = 0; i < gameObject_3.transform.childCount; i++)
+                gameObject_3.transform.GetChild(0).gameObject.SetActive(false);
+
+            matchedAtoms[1].Active.transform.Find("GameObject/" + moleculeName).gameObject.SetActive(true);
+
+            //matchedAtoms[1].Active.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
+            //matchedAtoms[1].Active.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
 
             this.GetComponent<DistanceMonitor>().ResetTheAnimation();
         }

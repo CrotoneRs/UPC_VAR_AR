@@ -25,21 +25,29 @@ namespace Assets.Scripts
             {
                 for (int i = 0; i < this.MoleculeDependencies[listSceneElement.name].Count; i++)
                 {
-                    this.MoleculeDependencies[listSceneElement.name][i].transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
-                    this.MoleculeDependencies[listSceneElement.name][i].transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+                    GameObject gameObject = this.MoleculeDependencies[listSceneElement.name][i].transform.Find("GameObject").gameObject;
 
+                    for (int k = 0; k < gameObject.transform.childCount; k++)
+                        gameObject.transform.GetChild(k).gameObject.SetActive(false);
+
+                    gameObject.transform.Find("Atom").gameObject.SetActive(true);
+                    
                     string subAtomName = this.MoleculeDependencies[listSceneElement.name][i].name.Split('_')[0];
-                    this.MoleculeDependencies[listSceneElement.name][i].transform.Find("GameObject/Atom/" + subAtomName + "Atom").position = Vector3.zero;
+                    gameObject.transform.Find("Atom").gameObject.transform.Find(subAtomName + "Atom").position = Vector3.zero;
                 }
 
                 this.MoleculeDependencies.Remove(listSceneElement.name);
             }
 
-            listSceneElement.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
-            listSceneElement.transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+            GameObject gameObjectMain = listSceneElement.transform.Find("GameObject").gameObject;
 
-            string atomName = listSceneElement.name.Split('_')[0];
-            listSceneElement.transform.Find("GameObject/Atom/" + atomName + "Atom").position = Vector3.zero;
+            for (int k = 0; k < gameObjectMain.transform.childCount; k++)
+                gameObjectMain.transform.GetChild(k).gameObject.SetActive(false);
+
+            gameObjectMain.transform.Find("Atom").gameObject.SetActive(true);
+
+            string subAtomNameMain = listSceneElement.name.Split('_')[0];
+            gameObjectMain.transform.Find("Atom").gameObject.transform.Find(subAtomNameMain + "Atom").position = Vector3.zero;
         }
 
         public void AddMolecule(List<DistanceMonitor.ActiveWithEnum> molecules)

@@ -11,7 +11,7 @@ namespace Assets.Scripts.Chemistry
         DICARBON_MONIXIDE, /* C2O */
         HYDROGEN_CYANIDE, /* HCN */
         HYDROGEN_ISOCYANIDE, /* HNC */
-        NITROUS_OXIDE, /* N2O */
+        //NITROUS_OXIDE, /* N2O */
         SODIUM_HYDROXIDE, /* NaOH */
         DIHYDRIDOCARBON, /* CH2 */
         DIHYDROGEN_MONOXIDE, /* H2O */
