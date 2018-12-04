@@ -57,6 +57,10 @@ namespace Assets.Scripts.Chemistry
                 interpolationTime += Time.deltaTime; yield return null;
             }
 
+            GameObject effect = GameObject.Find("BondEffect");
+            effect.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.75f, this.transform.position.z);
+            effect.GetComponent<ParticleSystem>().Play();
+
             GameObject gameObject_1 = matchedAtoms[0].Active.transform.Find("GameObject").gameObject;
 
             for (int i = 0; i < gameObject_1.transform.childCount; i++)
