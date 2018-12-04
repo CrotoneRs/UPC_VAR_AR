@@ -8,7 +8,7 @@ using System.Collections;
 
 namespace Assets.Scripts.Chemistry.Elements
 {
-    public class AtomMoleculeMovement : MonoBehaviour
+    public class AtomMovement : MonoBehaviour
     {
 
         float[] probField;
