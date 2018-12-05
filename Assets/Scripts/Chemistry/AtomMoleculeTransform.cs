@@ -57,8 +57,11 @@ namespace Assets.Scripts.Chemistry
                 interpolationTime += Time.deltaTime; yield return null;
             }
 
+            GameObject molecule = matchedAtoms[1].Active.transform.Find("GameObject/" + moleculeName).gameObject;
+            
+
             GameObject effect = GameObject.Find("BondEffect");
-            effect.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + 0.75f, this.transform.position.z);
+            effect.transform.position = molecule.transform.position;
             effect.GetComponent<ParticleSystem>().Play();
 
             GameObject gameObject_1 = matchedAtoms[0].Active.transform.Find("GameObject").gameObject;
@@ -82,7 +85,9 @@ namespace Assets.Scripts.Chemistry
             for (int i = 0; i < gameObject_3.transform.childCount; i++)
                 gameObject_3.transform.GetChild(0).gameObject.SetActive(false);
 
-            matchedAtoms[1].Active.transform.Find("GameObject/" + moleculeName).gameObject.SetActive(true);
+            molecule.SetActive(true);
+            //GameObject.Find("Label").gameObject.SetActive(true);
+            matchedAtoms[1].Active.transform.Find("GameObject/" + "Label" + moleculeName).gameObject.SetActive(true);
 
             //matchedAtoms[1].Active.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
             //matchedAtoms[1].Active.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
