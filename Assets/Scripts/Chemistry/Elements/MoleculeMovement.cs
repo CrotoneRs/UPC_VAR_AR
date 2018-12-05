@@ -18,7 +18,7 @@ namespace Assets.Scripts.Chemistry.Elements
             for (int i = 0; i < this.transform.childCount; i++)
             {
                 GameObject electron = this.transform.GetChild(i).gameObject;
-                if (electron.name != "Label") electron.transform.RotateAround(this.transform.position, this.transform.TransformVector(Vector3.up), 40 * Time.deltaTime);
+                electron.transform.RotateAround(this.transform.position, this.transform.TransformVector(Vector3.up), 40 * Time.deltaTime);
                 /* Use Simplifyed Schrodinger Equation To Get Orbit */
 
             }
