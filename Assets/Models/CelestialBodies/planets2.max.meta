@@ -1,0 +1,209 @@
+fileFormatVersion: 2
+guid: 183fac08abf5a7c488c13fdf74aa39ad
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Camera01
+    100002: Camera01.Target
+    100004: Camera02
+    100006: Camera02.Target
+    100008: Camera03
+    100010: Camera03.Target
+    100012: Camera04
+    100014: Camera04.Target
+    100016: Camera05
+    100018: Camera05.Target
+    100020: earth01
+    100022: earth02
+    100024: GeoSphere01
+    100026: GeoSphere02
+    100028: GeoSphere03
+    100030: GeoSphere05
+    100032: GeoSphere07
+    100034: GeoSphere08
+    100036: GeoSphere09
+    100038: GeoSphere10
+    100040: Gravity01
+    100042: Omni01
+    100044: Omni02
+    100046: PArray03
+    100048: PArray04
+    100050: //RootNode
+    100052: Sphere01
+    100054: Sphere02
+    100056: Tube01
+    400000: Camera01
+    400002: Camera01.Target
+    400004: Camera02
+    400006: Camera02.Target
+    400008: Camera03
+    400010: Camera03.Target
+    400012: Camera04
+    400014: Camera04.Target
+    400016: Camera05
+    400018: Camera05.Target
+    400020: earth01
+    400022: earth02
+    400024: GeoSphere01
+    400026: GeoSphere02
+    400028: GeoSphere03
+    400030: GeoSphere05
+    400032: GeoSphere07
+    400034: GeoSphere08
+    400036: GeoSphere09
+    400038: GeoSphere10
+    400040: Gravity01
+    400042: Omni01
+    400044: Omni02
+    400046: PArray03
+    400048: PArray04
+    400050: //RootNode
+    400052: Sphere01
+    400054: Sphere02
+    400056: Tube01
+    2000000: Camera01
+    2000002: Camera02
+    2000004: Camera03
+    2000006: Camera04
+    2000008: Camera05
+    2100000: 04 - Default
+    2100002: 01 - Default
+    2100004: 08 - Default
+    2100006: 07 - Default
+    2100008: 05 - Default
+    2100010: mars field
+    2100012: jupitar clouds
+    2100014: 10 - Default
+    2100016: No Name
+    2100018: 11 - Default
+    2100020: staturn field
+    2300000: earth01
+    2300002: earth02
+    2300004: GeoSphere01
+    2300006: GeoSphere02
+    2300008: GeoSphere03
+    2300010: GeoSphere05
+    2300012: GeoSphere07
+    2300014: GeoSphere08
+    2300016: GeoSphere09
+    2300018: GeoSphere10
+    2300020: Sphere01
+    2300022: Sphere02
+    2300024: Tube01
+    3300000: earth01
+    3300002: earth02
+    3300004: GeoSphere01
+    3300006: GeoSphere02
+    3300008: GeoSphere03
+    3300010: GeoSphere05
+    3300012: GeoSphere07
+    3300014: GeoSphere08
+    3300016: GeoSphere09
+    3300018: GeoSphere10
+    3300020: Sphere01
+    3300022: Sphere02
+    3300024: Tube01
+    4300000: GeoSphere01
+    4300002: earth01
+    4300004: earth02
+    4300006: Sphere01
+    4300008: GeoSphere02
+    4300010: GeoSphere03
+    4300012: GeoSphere05
+    4300014: GeoSphere07
+    4300016: Tube01
+    4300018: Sphere02
+    4300020: GeoSphere08
+    4300022: GeoSphere09
+    4300024: GeoSphere10
+    9500000: //RootNode
+    10800000: Omni01
+    10800002: Omni02
+    6000828045688606266: Camera01
+    6000828045688606268: Camera02
+    6000828045688606270: Camera03
+    6000828045688606272: Camera04
+    6000828045688606274: Camera05
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

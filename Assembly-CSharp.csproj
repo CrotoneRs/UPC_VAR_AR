@@ -62,6 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Almgp_particle_vol_1\script\sprite_sheet.cs" />
+    <Compile Include="Assets\Scripts\Astronomy\MoonMovement.cs" />
+    <Compile Include="Assets\Scripts\Astronomy\PlanetMovement.cs" />
+    <Compile Include="Assets\Scripts\BackScreenScript.cs" />
     <Compile Include="Assets\Scripts\CameraFocusMonitor.cs" />
     <Compile Include="Assets\Scripts\Chemistry\AtomDefinition.cs" />
     <Compile Include="Assets\Scripts\Chemistry\AtomMoleculeTransform.cs" />
@@ -70,7 +73,9 @@
     <Compile Include="Assets\Scripts\Chemistry\Elements\AtomScript.cs" />
     <Compile Include="Assets\Scripts\Chemistry\Elements\MoleculeMovement.cs" />
     <Compile Include="Assets\Scripts\Chemistry\MoleculeDefinition.cs" />
+    <Compile Include="Assets\Scripts\CloseAppScript.cs" />
     <Compile Include="Assets\Scripts\DistanceMonitor.cs" />
+    <Compile Include="Assets\Scripts\SceneLoaderScript.cs" />
     <Compile Include="Assets\Scripts\SceneMonitor.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
