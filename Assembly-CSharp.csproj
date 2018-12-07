@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Chemistry\MoleculeDefinition.cs" />
     <Compile Include="Assets\Scripts\CloseAppScript.cs" />
     <Compile Include="Assets\Scripts\DistanceMonitor.cs" />
+    <Compile Include="Assets\Scripts\LabelBehavior.cs" />
     <Compile Include="Assets\Scripts\SceneLoaderScript.cs" />
     <Compile Include="Assets\Scripts\SceneMonitor.cs" />
     <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
@@ -83,6 +84,7 @@
     <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
     <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
     <None Include="Assets\StreamingAssets\Vuforia\VAR_AR.xml" />
+    <None Include="Assets\StreamingAssets\Vuforia\VAR_AR_SOLAR_SYSTEM.xml" />
     <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
     <None Include="Assets\Almgp_particle_vol_1\shaders\emmision_particle.shader" />
     <None Include="Assets\Almgp_particle_vol_1\shaders\multypower_particle.shader" />

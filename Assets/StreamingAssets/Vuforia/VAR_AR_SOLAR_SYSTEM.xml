@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Venus_QR" size="1.000000 1.000000" />
+    <ImageTarget name="Uranus_QR" size="1.000000 1.000000" />
+    <ImageTarget name="Sun_QR" size="1.000000 1.000000" />
+    <ImageTarget name="Saturn_QR" size="1.000000 1.000000" />
+    <ImageTarget name="Pluto_QR" size="1.000000 1.000000" />
+    <ImageTarget name="Neptune_QR" size="1.000000 1.000000" />
+    <ImageTarget name="Mercury_QR" size="1.000000 1.000000" />
+    <ImageTarget name="Mars_QR" size="1.000000 1.000000" />
+    <ImageTarget name="Jupiter_QR" size="1.000000 1.000000" />
+    <ImageTarget name="Earth_QR" size="1.000000 1.000000" />
+  </Tracking>
+</QCARConfig>
