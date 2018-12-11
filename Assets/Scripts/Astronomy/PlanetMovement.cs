@@ -21,10 +21,11 @@ public class PlanetMovement : MonoBehaviour {
         foreach (TrackableBehaviour tr in activeTrackables)
         {
                 
-            if (tr.TrackableName.Equals("QR_CODE_PHOSPHORUS_1") && !this.gameObject.name.Equals("Sun") && this.gameObject.GetComponent<Renderer>().isVisible){
+            if (tr.TrackableName.Equals("Sun_QR") && !this.gameObject.name.Equals("Sun") && this.gameObject.GetComponent<Renderer>().isVisible){
                 Debug.Log(tr.TrackableName + "TROVATO");
-                
-                this.transform.RotateAround(GameObject.Find("Sun").transform.position, GameObject.Find("Sun").transform.parent.transform.TransformVector(Vector3.up), (20f) * Time.deltaTime);
+
+                float dist = Vector3.Distance(this.transform.position, GameObject.Find("Sun").transform.position);
+                this.transform.RotateAround(GameObject.Find("Sun").transform.position, GameObject.Find("Sun").transform.parent.transform.TransformVector(Vector3.up), (20f) * Time.deltaTime - (0.05f*dist));
             }
         }
     }

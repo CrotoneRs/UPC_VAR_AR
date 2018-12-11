@@ -20,7 +20,7 @@ namespace Assets.Scripts
         {
             /* TODO: Play With This Setting */
             CameraDevice.Instance.SetFocusMode(
-                CameraDevice.FocusMode.FOCUS_MODE_TRIGGERAUTO);
+                CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
         }
 
         private void OnPaused(bool isPaused)
@@ -29,7 +29,7 @@ namespace Assets.Scripts
             {
                 /* Set again autofocus mode when app is resumed */
                 CameraDevice.Instance.SetFocusMode(
-                   CameraDevice.FocusMode.FOCUS_MODE_TRIGGERAUTO);
+                   CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
             }
         }
     }
